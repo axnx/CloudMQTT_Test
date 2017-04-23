@@ -11,7 +11,7 @@ public class MQTTSenderJO {
 
 	public static void main(String[] args) throws IOException {
 
-		Properties props = new XProperties().read("config.properties");
+		Properties props =  XProperties.read("config.properties");
 
 		String broker = props.getProperty("broker");
 		String username = props.getProperty("username");

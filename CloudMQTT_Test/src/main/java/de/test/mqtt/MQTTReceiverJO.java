@@ -13,7 +13,7 @@ public class MQTTReceiverJO {
 	private static MqttClient mqttClient;
 	
   public static void main(String[] args) throws ClassNotFoundException, IOException {
-	  	Properties props = new XProperties().read("config.properties");
+	  	Properties props =  XProperties.read("config.properties");
 		 
 		String broker = props.getProperty("broker");
 		String username = props.getProperty("username");

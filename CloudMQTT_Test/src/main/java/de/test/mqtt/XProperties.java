@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class XProperties {
   
-	public Properties read (String propertiesFile) {
+	public static Properties read (String propertiesFile) {
 	
 		Properties prop = new Properties();
 		InputStream input = null;
@@ -19,7 +19,7 @@ public class XProperties {
 			if(prop.containsKey("externalfile")){
 				String externalfile = prop.getProperty("externalfile");
 				if(prop.getProperty("externalfile").length() > 0 ){
-					return this.read(externalfile);
+					return XProperties.read(externalfile);
 				}
 			}
 			
